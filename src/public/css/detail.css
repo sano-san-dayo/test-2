@@ -10,7 +10,7 @@
 }
 
 .product-image {
-    width: 100%;
+    width: 50%;
     height: auto;
 }
 
@@ -26,7 +26,7 @@
 .product__input-name,
 .product__input-price {
     display: block;
-    width: 100%;
+    width: 50%;
     background-color: #ffffff;
     padding: 11px 10px;
     border: 1px solid #e0dfde;
@@ -94,7 +94,7 @@
     gap: 20px;
 }
 
-.detail-form__button-back {
+.detail-form__back-button {
     width: 200px;
     height: 50px;
     padding: 13px 10px;
@@ -105,7 +105,7 @@
     fill: drop-shadow(0px 4px #000000 10%);
 }
 
-.detail-form__button-register {
+.detail-form__register-button {
     width: 200px;
     height: 50px;
     padding: 13px 10px;
