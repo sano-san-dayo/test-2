@@ -58,14 +58,13 @@
                     <span class="register-form__required">必須</span>
                     <span class="register-form__supplement">複数選択可能</span>
                 </div>
-                <div class="register-form__inner-season">
-                    @foreach ($seasons as $season)
-                    <div class="register-form__select-season">
-                        <label class="season-option">
-                            <input class="register-form__select-inline" type="checkbox" name="seasons[]" value="{{ $season->id }}">
-                            {{ $season->name }}
-                        </label>
-                    </div>
+                <div class="season-container">
+                    @foreach($seasons as $season)
+                        <div class="season-option">
+                            <input class="season-checkbox" type="checkbox" name="seasons[]" value="{{ $season->id }}" id="season{{ $season->id }}">
+                            <label for="season{{ $season->id }}" class="season-label"></label>
+                            <span class="season-name">{{ $season->name }}</span>
+                        </div>
                     @endforeach
                 </div>
             </div>

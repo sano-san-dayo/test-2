@@ -40,7 +40,7 @@
                 </p>
                 <div class="product_season">
                     <label class="product__season-label">季節</label>
-                    <div class="detail-form__inner-season">
+                    <!-- <div class="detail-form__inner-season">
                         @foreach ($seasons as $season)
                             <div class="detail-form__select-season">
                                 <label class="season-option">
@@ -50,7 +50,22 @@
                                 </label>
                             </div>
                         @endforeach
+                    </div> -->
+
+                    <div class="season-container">
+                        @foreach($seasons as $season)
+                            <div class="season-option">
+                                <input class="season-checkbox" type="checkbox" name="seasons[]" value="{{ $season->id }}"
+                                    id="season{{ $season->id }}"
+                                    {{ in_array($season->id, old('seasons', $product->seasons->pluck('id')->toArray())) ? 'checked' : '' }}>
+                                    <!-- {{ $product->seasons->contains($season->id) ? 'checked' : '' }}> -->
+                                <label for="season{{ $season->id }}" class="season-label"></label>
+                                <span class="season-name">{{ $season->name }}</span>
+                            </div>
+                        @endforeach
                     </div>
+
+
                 </div>
                 <p class="error-message">
                     @error('season')
