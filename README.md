@@ -12,18 +12,18 @@
 2. `composer install`
 3. `cp .env.example .env`
 4. .envの下記変更
-　(変更前)
-　　DB_HOST=127.0.0.1
-　　DB_PORT=3306
-　　DB_DATABASE=laravel
-　　DB_USERNAME=root
-　　DB_PASSWORD=
-　(変更後)
-　　DB_HOST=mysql
-　　DB_DATABASE=laravel_db
-　　DB_USERNAME=laravel_user
-　　DB_PASSWORD=laravel_pass
-5. アプリケーションキーの作成
+　(変更前)  
+　　DB_HOST=127.0.0.1  
+　　DB_PORT=3306  
+　　DB_DATABASE=laravel  
+　　DB_USERNAME=root  
+　　DB_PASSWORD=  
+　(変更後)  
+　　DB_HOST=mysql  
+　　DB_DATABASE=laravel_db  
+　　DB_USERNAME=laravel_user  
+　　DB_PASSWORD=laravel_pass  
+5. アプリケーションキーの作成  
 ``` bash
 php artisan key:generate
 ```
