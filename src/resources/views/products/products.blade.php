@@ -16,8 +16,6 @@
                 @csrf
                 <input class="search-form__keyword-input" type="text" name="keyword" placeholder="商品名で検索">
                 <button class="search-form__button" type="submit">検索</button>
-            <!-- </form>
-            <form class="sort-form" action="/" method="get"> -->
                 <label class="search-form__label">価格順で表示</label>
                 <select class="search-form__select" name="sort" onchange="this.form.submit()">
                     <option disabled selected>価格で並べ替え</option>

@@ -86,7 +86,6 @@ class ProductController extends Controller
 
     /* 商品情報更新 */
     public function update(ProductRequest $request, $id) {
-    // public function update(ProductRequest $request, Product $product) {
         /* 対象商品の情報取得 */
         $product = Product::findOrFail($id);
 
@@ -109,7 +108,6 @@ class ProductController extends Controller
         ]);
 
         /* 中間テーブル更新 */
-        // $product->seasons()->sync($request->seasons ?? []);
         $product->seasons()->sync($request->input('seasons', []));
 
         return redirect('/');
